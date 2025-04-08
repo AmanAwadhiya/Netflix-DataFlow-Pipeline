@@ -1,26 +1,9 @@
 gcp:
-  project_id: qwiklabs-gcp-03-043e886f7baa  #"your-gcp-project-id"
-  bucket_name: netflix_movies_details #"your-gcs-bucket"
-  dataset: netflix_movies_dataset #"your_bigquery_dataset"
+  project_id: "your-gcp-project-id"
+  bucket_name: "netflix_movies_details"
+  dataset: "netflix_movies_dataset" 
   credentials_file: "config/gcp_credentials.json"
 
 paths:
   raw_data: "gs://netflix_movies_detailed/raw/"
   processed_data: "gs://netflix_movies_detailed/processed/"
-
-
-
-# https://www.cloudskillsboost.google/focuses/609?catalog_rank=%7B%22rank%22%3A39%2C%22num_filters%22%3A1%2C%22has_search%22%3Afalse%7D&parent=catalog
-# https://www.cloudskillsboost.google/focuses/3483?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A1%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=43021633
-
-
-# gsutil mb -p qwiklabs-gcp-03-043e886f7baa -l US gs://netflix_movies_details/
-# gsutil mb -p qwiklabs-gcp-03-807bbb3ceae3 -l us-central gs://qwiklabs-gcp/
-
-
-# bq --location=US mk --dataset qwiklabs-gcp-03-043e886f7baa:netflix_movies_dataset
-
-# upload file 
-
-
-# bq load --autodetect --source_format=CSV netflix_movies_dataset.netflix_movies gs://netflix_movies_detailed/processed/netflix_cleaned.csv
