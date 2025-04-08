@@ -1,0 +1,21 @@
+# Essential Libraries
+pandas
+numpy
+
+# Google Cloud
+google-cloud-storage
+google-cloud-bigquery
+
+# Workflow Orchestration
+prefect
+
+# Batch Processing
+pyspark
+fastparquet
+
+# ETL & Data Transformation
+dbt-bigquery
+
+# Miscellaneous
+pyyaml  # For reading config.yaml
+python-dotenv  # For handling environment variables
