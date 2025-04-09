@@ -1,0 +1,15 @@
+version: '3'
+services:
+  spark:
+    image: apache/spark
+    volumes:
+      - ./config:/config
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/config/gcp_credentials.json
+
+  prefect:
+    image: prefecthq/prefect
+    volumes:
+      - ./config:/config
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/config/gcp_credentials.json
