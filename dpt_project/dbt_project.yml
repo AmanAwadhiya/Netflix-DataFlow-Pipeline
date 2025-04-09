@@ -1,0 +1,14 @@
+name: "netflix_dbt_project"
+version: "1.0.0"
+config-version: 2
+
+profile: "netflix_dbt"
+
+models:
+  netflix_dbt_project:
+    staging:
+      +schema: "staging"
+      +materialized: view
+    marts:
+      +schema: "analytics"
+      +materialized: table

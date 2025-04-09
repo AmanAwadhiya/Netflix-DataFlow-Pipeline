@@ -1,0 +1,13 @@
+netflix_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-gcp-project-id
+      dataset: netflix_dataset
+      threads: 4
+      keyfile: config/gcp_credentials.json
+      timeout_seconds: 300
+      location: US
+      priority: interactive
